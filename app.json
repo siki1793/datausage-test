@@ -1,0 +1,8 @@
+{
+  "name": "Data usage test demo app",
+  "description": "data usage rest server",
+  "repository": "https://github.com/siki1793/datausage-test",
+  "logo": "",
+  "keywords": ["node", "express", "static"],
+  "image": ""
+}
