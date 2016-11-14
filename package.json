@@ -2,6 +2,9 @@
   "name": "datausage-test",
   "version": "1.0.0",
   "description": "datausage test app hosting on heroku",
+  "engines": {
+    "node": "4.4.5"
+  },
   "main": "server.js",
   "dependencies": {
     "JSONStream": "^0.10.0",
