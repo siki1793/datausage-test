@@ -52,7 +52,7 @@ app.use('/login',login);
 app.use('/test',sync);
 //console.log(server);
 //console.log(request.connection.remoteAddress);
-var port_number = server.listen(process.env.PORT || 3000);
+var port_number = process.env.PORT || 3000;
 var server = app.listen(port_number, function () {
 
 	var host = server.address().address
