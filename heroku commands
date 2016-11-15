@@ -1,0 +1,17 @@
+
+$heroku login
+
+$heroku create appname
+
+$git push heroku master
+
+$heroku logs
+
+$heroku local web
+
+$heroku restart
+
+
+
+to scale it
+$heroku ps:scale web=1

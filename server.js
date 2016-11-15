@@ -52,7 +52,8 @@ app.use('/login',login);
 app.use('/test',sync);
 //console.log(server);
 //console.log(request.connection.remoteAddress);
-var server = app.listen(8888, function () {
+var port_number = server.listen(process.env.PORT || 3000);
+var server = app.listen(port_number, function () {
 
 	var host = server.address().address
 	var port = server.address().port
