@@ -6,10 +6,10 @@ var db = database.db1();
 
 getMobileNumbers.get(function (req, res) {
 
-	var coll = "logs";
+	var coll = "userinfo";
 	var getNumbers = db.collection(coll);
 	
-    getNumbers.find({},{"number" : 1, "_id" : 0 },function(err,data){
+    getNumbers.find({},{"mobileNumber" : 1, "_id" : 0 },function(err,data){
 		if(err){
 			 console.log(err);
 			}

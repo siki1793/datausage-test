@@ -6,7 +6,7 @@ var db = database.db1();
 
 getCoordinates.get(function (req, res) {
 
-	var coll = "logs";
+	var coll = "totaldatacol";
 	var getCoordinates = db.collection(coll);
 	
     getCoordinates.find({},{"data.latitude" :1 ,"data.longitude":1,"number":1},function(err,data){
