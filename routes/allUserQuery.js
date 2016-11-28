@@ -219,7 +219,7 @@ allUserQuery.post(function(req,res){
 		             				}
 						callbackCounter++;
 						if(callbackCounter === 5){
-							res.set("Access-Control-Allow-Origin", "*");
+							// res.set("Access-Control-Allow-Origin", "*");
 	  						console.log("sending the data as per request at " + moment()._d);
 							//console.log(datatosend);
 	  						res.write(JSON.stringify(datatosend));

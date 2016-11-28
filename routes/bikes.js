@@ -3,7 +3,7 @@ var express = require('express')
   , bikeRoutes = router.route('/')
 var database = require("../databaseConnection");
 var db1 = database.db1();
-var getdata=db1.collection("totaldatacol");
+var getdata=db1.collection("appwisecol");
 var moment = require("moment");
 var momentz = require("moment-timezone");
 
@@ -61,7 +61,7 @@ console.log("request received for query at " + moment()._d);
   // console.log(isoToDate);
 
     res.write('hello bikes');
-    getdata.aggregate([ {$unwind :'$totalData'},{$match:{"totalData.date":{"$gte":fromDate}}}],function(err,docs){
+    getdata.aggregate([ {$unwind:"$applicationData"},{$match:{"applicationData.date":{"$gte":fromDate,"$lte":toDate}}},{$project:{"applicationData.uid":1,"applicationData.applicationName":1,"applicationData.applicationRX":1,"applicationData.applicationTX":1,"applicationData.applicationTotal":1,"_id":0}},{$group:{"_id":"$applicationData.applicationName",applicationTotal:{$avg:"$applicationData.applicationTotal"},applicationRX:{$avg:"$applicationData.applicationRX"},applicationTX:{$avg:"$applicationData.applicationTX"}}},{$sort:{"applicationTotal":-1}},{$limit:10}],function(err,docs){
     	if(err){
     		console.log(err);
     		return 0;
