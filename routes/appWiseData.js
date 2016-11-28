@@ -81,7 +81,7 @@ getdata.aggregate([{$unwind:"$applicationData"},{$match:{"applicationData.date":
 			return 0;
 		}
 		else{
-      // res.set("Access-Control-Allow-Origin", "*");
+      res.set("Access-Control-Allow-Origin", "*");
 			datatosend = JSON.stringify(docs);
 			res.write(datatosend);		
 			res.end();
