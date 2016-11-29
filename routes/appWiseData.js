@@ -60,14 +60,14 @@ appWiseData.post(function(req,res){
  */
  // newDate(year,month,date)
 
-  var fromDate = new Date(startDate.year(),startDate.month(),startDate.date());
+  var fromDate = new Date(startDate.year(),startDate.month(),startDate.date()+1);
   /*
   fromDate = moment(fromDate);
   fromDate = momentz.tz(fromDate._d,'GMT');
   fromDate = moment.utc(fromDate.format());
   fromDate = fromDate._i;
 */
-  var toDate = new Date(endDate.year(),endDate.month(),endDate.date());
+  var toDate = new Date(endDate.year(),endDate.month(),endDate.date()+1);
   console.log("going to query with the following dates");
   console.log(fromDate);
   console.log(toDate);
