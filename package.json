@@ -18,7 +18,7 @@
     "http-server": "^0.8.5",
     "moment": "^2.16.0",
     "moment-timezone": "^0.4.1",
-    "mongodb": "^1.4.40",
+    "mongodb": "^3.6.2",
     "mongojs": "^0.18.2",
     "mongoose": "^4.6.7",
     "prompt": "^0.2.14",
