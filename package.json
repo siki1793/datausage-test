@@ -20,7 +20,7 @@
     "moment-timezone": "^0.4.1",
     "mongodb": "^1.4.40",
     "mongojs": "^0.18.2",
-    "mongoose": "^4.6.7",
+    "mongoose": "^5.10.7",
     "prompt": "^0.2.14",
     "request": "^2.78.0",
     "winston": "^1.1.2",
